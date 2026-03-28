@@ -1,0 +1,108 @@
+{
+  "dataset_name": "avalon_tom_benchmark",
+  "game": "The Resistance: Avalon",
+  "version": "1.0",
+  "items": [
+    {
+      "id": "avalon_001",
+      "tom_type": "belief",
+      "difficulty": "easy",
+      "game_rules": "Avalon is a social deduction game for 5–10 players. There are Good (Loyal Servants of Arthur) and Evil (Minions of Mordred). Good wins by completing 3 quests; Evil wins by failing 3 quests or by assassinating Merlin after a Good victory. Merlin is Good and sees all Evil players at the start; he must help Good win without being identified. Each round a leader proposes a team; the group votes to approve or reject; if approved, team members secretly play Success or Fail. One Fail fails the quest (standard rules).",
+      "opponent_strategy": "You are playing with a group that tends to approve teams when the proposer has been on successful quests before. Evil players in your group often vote Approve on the first quest to avoid looking suspicious, then vote Reject on later quests when they are not on the team.",
+      "scenario": "You are Merlin. The first quest was proposed by Alice (unknown role); the team was Alice, Bob, Carol. The quest succeeded. The second quest is about to be proposed. Dave and Eve have not been on any quest yet. You know that Bob is Evil and Carol is Good. Alice’s first quest team did not include Dave or Eve.",
+      "question": "From the perspective of an Evil player who does not know you are Merlin, what is the most likely belief about why the first quest succeeded?",
+      "options": [
+        "Alice, Bob, and Carol are all Good, so the quest was bound to succeed.",
+        "At least one of Alice, Bob, or Carol is Evil but chose to play Success to avoid suspicion on the first quest.",
+        "Dave or Eve is Evil and was kept off the team on purpose by someone who knows roles.",
+        "The leader (Alice) is Merlin and deliberately picked a safe team."
+      ],
+      "correct_option": "B"
+    },
+    {
+      "id": "avalon_002",
+      "tom_type": "intention",
+      "difficulty": "medium",
+      "game_rules": "Avalon: Good vs Evil; Good wins with 3 successful quests. Merlin sees Evil but must stay hidden; Assassin can name Merlin after a Good victory to flip the win. Teams are proposed, voted on, then go on quest; one Fail fails the quest.",
+      "opponent_strategy": "The Evil players at the table tend to put each other on quests when they are leader, so that they can coordinate fails. They avoid failing the first quest to look loyal.",
+      "scenario": "Quest 1 (team: Alice, Bob) succeeded. Quest 2 (team: Alice, Carol, Dave) failed. You are a Good player. Frank is the current leader. Frank proposes a team: Frank, Bob, Carol. The group is about to vote.",
+      "question": "If Frank is Evil, what is Frank most likely trying to achieve by proposing this team?",
+      "options": [
+        "Frank wants to look Good by including two people who were on the failed Quest 2 (Carol) and a previous success (Bob), to gather information.",
+        "Frank is trying to get at least one other Evil player (Bob or Carol) on the team so they can coordinate a fail without taking all the blame.",
+        "Frank is trying to get the proposal rejected so that leadership passes and Evil can propose later.",
+        "Frank believes Bob is Merlin and wants to fail the quest to frame Bob."
+      ],
+      "correct_option": "B"
+    },
+    {
+      "id": "avalon_003",
+      "tom_type": "strategic_decision",
+      "difficulty": "medium",
+      "game_rules": "Avalon: Good needs 3 successful quests; Evil needs 3 failed quests or to assassinate Merlin after a Good win. Merlin sees all Evil; he must not be obvious. Teams are proposed and voted on; one Fail fails a quest.",
+      "opponent_strategy": "Evil players in this group often reject proposals when they are not on the team, to force a different team composition. Good players usually approve if the proposer has not yet been on a failed quest.",
+      "scenario": "You are Merlin. You know that Dave and Eve are Evil. Quest 1 succeeded with team (Alice, Bob). Quest 2 failed with team (Alice, Carol, Dave). You are the current leader. You must propose a team of three for Quest 3. Alice and Bob have each been on one success and one fail (Alice on both quests, Bob only on Quest 1). Carol was on the failed Quest 2. Dave and Eve were on Quest 2 (Dave) and none (Eve).",
+      "question": "Which team proposal best helps Good win while reducing the chance that Evil identifies you as Merlin?",
+      "options": [
+        "Propose yourself, Alice, Bob — you know both Alice and Bob are Good, so the quest will succeed, but including yourself may signal you are Merlin.",
+        "Propose Alice, Carol, Eve — two Good (Alice, Carol) and one Evil (Eve); Eve might fail, but you avoid putting yourself on the team.",
+        "Propose Bob, Carol, Dave — one Evil (Dave); if Dave fails again he will look very suspicious, so he might play Success; then the quest can succeed.",
+        "Propose Alice, Dave, Eve — both Evil on the team; they might both pass to look Good, giving you a success and making your proposal look neutral."
+      ],
+      "correct_option": "B"
+    },
+    {
+      "id": "avalon_004",
+      "tom_type": "belief",
+      "difficulty": "hard",
+      "game_rules": "Avalon: Good vs Evil; 3 successful quests for Good to win. Merlin sees Evil; Assassin can kill Merlin after a Good win. Team proposal, vote, then quest; one Fail fails the quest.",
+      "opponent_strategy": "Players at the table use second-order reasoning: they consider what others believe about who is Good or Evil. Evil often tries to look like they are reasoning as Good would.",
+      "scenario": "You are a Good player (not Merlin). Quest 1 team was (Alice, Bob) — succeeded. Quest 2 team was (Alice, Carol, Dave) — failed. Carol has just said publicly: 'I think Dave is Evil because he was on the failed quest and we had no reason to fail as Good.' Alice then says: 'I’m not sure; maybe Carol is deflecting.' You observe that Dave has been quiet. Bob has not commented on Carol or Dave.",
+      "question": "What does Alice most likely believe about what Carol is trying to do?",
+      "options": [
+        "Alice believes Carol is honestly trying to find Evil and suspects Dave.",
+                "Alice believes Carol is trying to deflect suspicion from herself by accusing Dave.",
+        "Alice believes Carol is Evil and is coordinating with Dave to create confusion.",
+                "Alice believes neither Carol nor Dave is Evil and that the fail was random."
+      ],
+      "correct_option": "B"
+    },
+    {
+      "id": "avalon_005",
+      "tom_type": "intention",
+      "difficulty": "easy",
+      "game_rules": "Avalon: Good (Loyal Servants) vs Evil (Minions of Mordred). Good wins with 3 successful quests. Merlin knows who is Evil; Assassin can name Merlin after a Good win. Each quest: propose team, vote, then succeed/fail; one Fail fails the quest.",
+      "opponent_strategy": "Evil players often vote Reject when the proposed team has no Evil members, to try to get a different team. They sometimes vote Approve when they are on the team so they can fail the quest.",
+      "scenario": "You are Good. The leader proposes a team of two: herself and Bob. You have no private information. Before the vote, Carol (who is not on the team) says 'I’ll Approve.' Dave (also not on the team) says 'I’ll Reject.'",
+      "question": "If Dave is Evil, what is Dave most likely trying to accomplish by voting Reject?",
+      "options": [
+        "Dave wants to protect the leader and Bob by rejecting a risky team.",
+        "Dave wants to reject this team so that the next proposal might include Dave or another Evil player who can fail the quest.",
+        "Dave is signalling to the leader that Dave is Good by being cautious.",
+                "Dave believes Bob is Merlin and wants to delay the quest."
+      ],
+      "correct_option": "B"
+    },
+    {
+      "id": "avalon_006",
+      "tom_type": "strategic_decision",
+      "difficulty": "hard",
+      "game_rules": "Avalon: Good needs 3 successful quests; Evil needs 3 failures or to assassinate Merlin after a Good win. Merlin sees Evil; he must help Good without being identified. Proposal, vote, quest; one Fail fails the quest.",
+      "opponent_strategy": "The Assassin in this game is known to target players who gave accurate reads early. Evil tends to fail quests only when two Evil are on the team, so blame is shared.",
+      "scenario": "You are Merlin. Quests 1 and 2 both succeeded. Quest 3 is next; two successes will win the game for Good. You know Eve and Frank are Evil. Eve was on Quest 1 (success) and Quest 2 (success). Frank was only on Quest 2 (success). No one has failed a quest yet. You are not the leader; the leader will propose a team of three. You will only vote. Who should you most want the leader to include to maximise the chance Good wins and you are not assassinated?",
+      "question": "Which recommendation best balances winning the quest and not revealing that you are Merlin?",
+      "options": [
+        "Prefer a team that includes both Eve and Frank so they might fail and be exposed; you can then claim you 'suspected' them after the fail.",
+        "Prefer a team with only one of Eve or Frank, so at most one Fail is played and the quest might still succeed; avoid stating who you suspect so the Assassin cannot infer you are Merlin.",
+        "Prefer a team with no Evil, so the quest certainly succeeds; the Assassin will have no extra information from quest fails.",
+        "Prefer a team that includes yourself so you can control the outcome and signal your identity to Good only."
+      ],
+      "correct_option": "B"
+    }
+  ],
+  "metadata": {
+    "tom_types": ["belief", "intention", "strategic_decision"],
+    "difficulty_levels": ["easy", "medium", "hard"],
+    "option_format": "correct_option is one of A, B, C, D corresponding to options[0]..[3]"
+  }
+}
