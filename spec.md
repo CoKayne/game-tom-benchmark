@@ -102,14 +102,14 @@ Custom-designed. Items are created from:
 ## 6. Environment and Implementation
 
 **Environment**  
-- Document: hardware (GPU type and count), OS, Python version, and key libraries (e.g. `transformers`, `openai`, or official SDKs).
-- If using APIs: note provider, model IDs, and date of access (APIs can change over time).
+- Document: hardware (GPU type and count), OS, Python version, and key libraries (e.g. `transformers`, `torch`, `accelerate`).
+- Document Hugging Face model IDs used for evaluation and optional `HF_TOKEN` for gated models.
 
 **Interface**  
-- Scripts or notebooks that: load the JSON dataset → call the model (API or local) → parse the chosen option → compute metrics. CLI or small API is optional.
+- Scripts or notebooks that: load the JSON dataset → run local Hugging Face inference → parse the chosen option → compute metrics. CLI entry point: `python -m eval.run_eval`.
 
 **Reproducibility**  
-- `requirements.txt` or `environment.yml` with versions.
+- `pyproject.toml` / `uv.lock` (or equivalent) with pinned versions.
 - README with: how to obtain data (or generate from your spec), how to run evaluation, and which seeds/settings were used.
 - Optionally: Docker or a single script that runs the full evaluation.
 
