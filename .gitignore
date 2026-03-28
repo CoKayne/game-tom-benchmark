@@ -1,0 +1,11 @@
+# Local env with secrets (copy from .env.example)
+.env
+
+# uv / Python
+.venv/
+__pycache__/
+*.pyc
+.python-version
+
+# Results (optional; remove if you want to track results)
+results/
